@@ -24,7 +24,7 @@ public class ProblemTwo {
                     } 
                     // Jika nama berbeda, bandingkan Nama
                     else {
-                        return s1.getName().compareTo(s2.getName());
+                        return s1.getName().compareToIgnoreCase(s2.getName());
                     }
                 })
                 .collect(Collectors.toList()); // Mengumpulkan hasil
