@@ -14,11 +14,11 @@ public class ProblemOne {
         list.add(new Employee("Alice", 10000));
 
         // Melakukan proses filtering/sorting menggunakan Stream API
-        List<Employee> sortedEmp = list.[1]__________ // Ubah list ke stream
+        List<Employee> sortedEmp = list.stream() // Ubah list ke stream
                 // Mengurutkan employee berdasarkan nama
-                .[2]__________((e1, e2) -> e1.[3]__________().compareTo(e2.getName()))
+                .sorted((e1, e2) -> e1.getName().compareTo(e2.getName()))
                 // Mengumpulkan hasil akhir
-                .[4]__________( [5]__________.toList() );
+                .collect(Collectors.toList());
 
         for(Employee e : sortedEmp){
             System.out.println(e);
